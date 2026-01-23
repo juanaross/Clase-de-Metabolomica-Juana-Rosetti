@@ -1,0 +1,25 @@
+2+2
+2^(-4)
+# :P
+x<-14
+26-x
+perros <- 15
+perros+x
+ovejas <- 2
+perros+ovejas
+cho <- 535000
+vero <- 1350000
+total <- cho+vero
+x <- 35
+y <- 22
+w <- "34"
+z <- "25"
+w+z
+x+y
+nombre <- c("Manuel", "Jesus", "Juana", "Yaniv")
+estatura <- c(177, 170, 160, 179)
+edad <- c(42, 21, 22, 23)
+mascota <- c("si", "si", "no", "si")
+tabla <- data.frame(nombre, estatura, edad, mascota)
+tabla
+View(tabla)
