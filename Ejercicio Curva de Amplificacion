@@ -1,0 +1,18 @@
+#Ejercicio 3
+install.packages("pacman")
+library("pacman")
+p_load("ggplot2", #para graficar  
+       "dplyr", #para facilitar el manejo de datos
+       "vroom") #llamar repositorios 
+
+Datos_curva <- vroom(file="https://raw.githubusercontent.com/ManuelLaraMVZ/resultados_PCR_practica/refs/heads/main/Amplif_grupo1_17022025.csv")
+head (Datos_curva) #solo para que de los 6 primeros datos
+Curva_1 <- Datos_curva %>% 
+  select(1,7)
+
+  Curva_1
+# el nuevo objeto va a tener una asignacion a partir de la base de datos xx, y le hace 
+  Grafica_curva <- ggplot(Curva_1, mapping=aes(x=Cycle, y = F1)) + geom_point()+geom_line(color="blue", size=1.2)
+  Grafica_curva
+Grafica_curva_2 <- Grafica_curva+labs(x="Ciclos", y="Fluorescencia", title="Creado por: Juana Rosetti", subtitle="Grafica F1", caption="Ejercicio 3")+ theme_classic()  
+Grafica_curva_2
